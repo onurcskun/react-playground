@@ -20,7 +20,7 @@ class App extends React.Component{
             <input
               placeholder="search"
               ref={(i) => this.newInput = i}
-              onChange={e => this.setState({ query: e.target.value })}/>
+              onChange={e => this.setState({ query: this.newInput })}/>
             <ul>
               {this.state.query && filteredResults.map(e => <li key={e}>{e}</li>)}
             </ul>
